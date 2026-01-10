@@ -23,6 +23,29 @@ The models were trained on a multivariate, 10-year (2014-2023) dataset of four t
 
 ---
 
+## 📈 Exploratory Data Analysis (EDA)
+[cite_start]An extensive EDA was conducted to identify the primary characteristics, temporal dependencies, and inter-relationships within the multivariate dataset[cite: 153].
+
+### 1. Adjusted Close Prices (Trend Analysis)
+[cite_start]The visualization of adjusted close prices on a logarithmic scale highlights the diverse growth trajectories and significant volatility differentials between the four assets (AAPL, META, NFLX, TSLA) over the decade[cite: 154].
+
+![Adjusted Close Prices](adj_close_log_scale.png)
+[cite_start]*(Figure 1: Adjusted Close Prices (Log Scale) [cite: 289])*
+
+### 2. Daily Returns (Stationarity Check)
+[cite_start]Unlike the raw price series which exhibits non-stationary trends, the daily percent returns are demonstrably stationary, oscillating around a mean of zero[cite: 155]. [cite_start]This property is fundamental for time-series modeling, validating the choice to predict price direction rather than raw price levels[cite: 156, 157].
+
+![Daily Returns](daily_returns.png)
+[cite_start]*(Figure 2: Daily Percent Returns [cite: 291])*
+
+### 3. Correlation Matrix (Multivariate Justification)
+[cite_start]The Pearson correlation matrix reveals moderate to strong positive correlations (0.51 to 0.72) across all asset pairs[cite: 158]. [cite_start]This indicates that the assets tend to move in sync with broader market sentiment, justifying a multivariate modeling approach to capture these shared patterns[cite: 159, 160].
+
+![Correlation Matrix](returns_correlation_heatmap.png)
+[cite_start]*(Figure 3: Correlation Matrix of Daily Returns [cite: 293])*
+
+---
+
 ## 🧠 Model Architectures
 [cite_start]Three distinct models were developed alongside a Dummy Classifier baseline[cite: 184]. All neural networks shared a consistent architecture to ensure a fair comparison:
 
@@ -71,4 +94,4 @@ The ROC curve visually confirms that LSTM and GRU (top lines) possess discrimina
 * [cite_start]**Exogenous Data:** Incorporating market sentiment, news, and macroeconomic indicators to improve signal-to-noise ratio[cite: 240].
 
 ---
-*© 2025 Ryan Tang. Faculty of Computing and Digital Technology, HELP University.*
+*© 2025 Ryan Tang.*

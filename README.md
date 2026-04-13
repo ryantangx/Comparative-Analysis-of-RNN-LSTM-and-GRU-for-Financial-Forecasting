@@ -13,7 +13,7 @@ The models were trained on a multivariate, 10-year (2014-2023) dataset of four t
 ---
 
 ## 📂 Data & Preprocessing
-The dataset comprises 10 years of daily OHLC data from **2014-01-02 to 2023-12-29**.
+The [dataset](cleaned_multivariate_stocks.csv) comprises 10 years of daily OHLC data from **2014-01-02 to 2023-12-29**.
 * **Target Variable:** Binary classification where `1` = Bullish (Next Day Close > Current Close) and `0` = Bearish/Neutral.
 * **Feature Set (18 Total):** Adjusted Close, Volume, RSI (14-day), MACD, SMA (50/100), and EMA.
 
